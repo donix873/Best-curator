@@ -13,7 +13,12 @@ import { assetUrl } from '../utils/assets'
 const gratitude = [
   'Сіз бізге тек білім жолын көрсеткен жоқсыз…',
   'Сіз бізге өзімізге сенуді үйреттіңіз.',
+  'Сіздің әр сөзіңіз бізге жігер береді.',
+  'Қиын сәттерде қолдағаныңызды ұмытпаймыз.',
+  'Біздің кішкентай жеңістерімізге бірге қуандыңыз.',
+  'Әрқайсымызға сеніммен қарадыңыз.',
   'Әр қолдауыңыз біз үшін қымбат.',
+  'Жылы сөзіңіз жүрегімізде ұзақ сақталады.',
   'Біз сізді шын жүректен бағалаймыз.',
   'Рақмет сізге, Аймерек апай!',
 ]
@@ -60,12 +65,11 @@ export function HomePage() {
             Оқиғаны жалғастыру <ArrowDown size={16} />
           </motion.a>
         </div>
-        <span className="hero__index" aria-hidden="true">01</span>
       </section>
 
       <section className="section story" id="story">
         <div className="section-heading">
-          <Reveal><p className="eyebrow">ОНЫҢ ЖОЛЫ · HER STORY</p></Reveal>
+          <Reveal><p className="eyebrow">АЙМЕРЕК АПАЙДЫҢ ЖОЛЫ · HER STORY</p></Reveal>
           <Reveal delay={0.1}><h2>Арманнан басталған <em>жол</em></h2></Reveal>
           <Reveal delay={0.2}><p>Әр кезеңнің өз үні, өз жарығы бар. Нақты оқиғалар мен күндер материалдардан кейін осы хикаяны толықтырады.</p></Reveal>
         </div>
@@ -114,9 +118,38 @@ export function HomePage() {
       <section className="section gratitude" id="gratitude">
         <div className="gratitude__glow" aria-hidden="true" />
         <Reveal><p className="eyebrow">БІЗДІҢ АЛҒЫСЫМЫЗ</p></Reveal>
+        <Reveal delay={0.1}><h2 className="gratitude__title">Жүректен шыққан <em>сөздер</em></h2></Reveal>
+        <Reveal delay={0.2}><p className="gratitude__intro">Әр сөйлем — сізге айтқымыз келген алғысымыздың бір бөлігі.</p></Reveal>
         <div className="gratitude__notes">
+          <motion.svg
+            className="gratitude__thread"
+            viewBox="0 0 920 1420"
+            preserveAspectRatio="none"
+            aria-hidden="true"
+          >
+            <defs>
+              <linearGradient id="gratitude-thread-gradient" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stopColor="#C9A5E8" />
+                <stop offset="0.5" stopColor="#F4B8D2" />
+                <stop offset="1" stopColor="#C9A5E8" />
+              </linearGradient>
+            </defs>
+            <motion.path
+              d="M170 70 C190 150 740 105 745 225 S205 290 205 390 S730 450 715 560 S190 625 205 735 S755 800 720 910 S185 985 215 1085 S725 1150 700 1250 S430 1325 460 1390"
+              fill="none"
+              stroke="url(#gratitude-thread-gradient)"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeDasharray="7 10"
+              initial={{ pathLength: 0, opacity: 0 }}
+              whileInView={{ pathLength: 1, opacity: 0.8 }}
+              viewport={{ once: true, amount: 0.08 }}
+              transition={{ duration: 2.8, ease: 'easeInOut' }}
+            />
+          </motion.svg>
           {gratitude.map((line, index) => (
             <Reveal className={`note note--${index + 1}`} delay={index * 0.08} key={line}>
+              <span className="note__number">{String(index + 1).padStart(2, '0')}</span>
               {index === gratitude.length - 1 && <Heart size={19} fill="currentColor" aria-hidden="true" />}
               <p>{line}</p>
             </Reveal>

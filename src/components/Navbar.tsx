@@ -5,10 +5,10 @@ import { Link, useLocation } from 'react-router-dom'
 
 const links = [
   { label: 'Басты бет', to: '/' },
-  { label: 'Оның жолы', to: '/#story' },
+  { label: 'Аймерек апайдың жолы', to: '/#story' },
   { label: 'Жетістіктері', to: '/achievements' },
   { label: 'Естеліктер', to: '/#gallery' },
-  { label: 'Оның әлемі', to: '/her-world' },
+  { label: 'Аймерек апайдың әлемі', to: '/her-world' },
   { label: 'Алғыс', to: '/#gratitude' },
 ]
 
