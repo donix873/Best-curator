@@ -12,6 +12,10 @@ const curatedCrops = {
   'personal-photobooth-friend-13.jpg': { left: 0, top: 117, width: 591, height: 739 },
   'personal-outdoor-portrait-14.jpg': { left: 0, top: 270, width: 591, height: 739 },
   'personal-graduation-selfies-15.jpg': { left: 0, top: 117, width: 591, height: 739 },
+  'personal-fire-night-16.jpg': { left: 40, top: 365, width: 470, height: 588 },
+  'personal-new-city-night-17.jpg': { left: 40, top: 350, width: 470, height: 588 },
+  'personal-new-city-sphere-18.jpg': { left: 40, top: 350, width: 470, height: 588 },
+  'personal-night-portrait-19.jpg': { left: 40, top: 340, width: 470, height: 588 },
 }
 
 async function listImages(directory) {

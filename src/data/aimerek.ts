@@ -38,7 +38,7 @@ export interface AimerekData {
 
 export const aimerek: AimerekData = {
   name: 'Аймерек апай',
-  heroImage: 'images/optimized/personal-outdoor-portrait-14-curated.webp',
+  heroImage: 'images/optimized/personal-fire-night-16-curated.webp',
   biography: null,
   untScore: 98,
   untYear: 2026,
@@ -71,6 +71,42 @@ export const aimerek: AimerekData = {
     },
   ],
   gallery: [
+    {
+      src: 'images/optimized/personal-fire-night-16-curated.webp',
+      fullSrc: 'images/optimized/personal-fire-night-16.webp',
+      alt: 'Аймерек апайдың кешкі от жарығындағы портреті',
+      caption: 'Оттай жарқын бір кеш',
+      category: 'Естеліктер',
+      width: 470,
+      height: 588,
+    },
+    {
+      src: 'images/optimized/personal-new-city-sphere-18-curated.webp',
+      fullSrc: 'images/optimized/personal-new-city-sphere-18.webp',
+      alt: 'Аймерек апайдың жаңа қаладағы кешкі портреті',
+      caption: 'Жаңа қала · жаңа өмір',
+      category: 'Естеліктер',
+      width: 470,
+      height: 588,
+    },
+    {
+      src: 'images/optimized/personal-new-city-night-17-curated.webp',
+      fullSrc: 'images/optimized/personal-new-city-night-17.webp',
+      alt: 'Аймерек апайдың қала көшесіндегі кешкі суреті',
+      caption: 'Қала шамдарындағы сәт',
+      category: 'Естеліктер',
+      width: 470,
+      height: 588,
+    },
+    {
+      src: 'images/optimized/personal-night-portrait-19-curated.webp',
+      fullSrc: 'images/optimized/personal-night-portrait-19.webp',
+      alt: 'Аймерек апайдың түнгі жарық астындағы портреті',
+      caption: 'Түнгі тыныштық',
+      category: 'Естеліктер',
+      width: 470,
+      height: 588,
+    },
     {
       src: 'images/optimized/infologia/infologia-certificate-story-01.webp',
       alt: 'Аймерек апайдың Infologia сертификаттары көрсетілген естелік скриншот',
