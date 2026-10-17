@@ -308,11 +308,11 @@ export const aimerek: AimerekData = {
   ],
   quotes: [],
   interests: [],
-  favoriteArtists: [],
-  favoriteSongs: [],
+  favoriteArtists: ['Stray Kids', 'Indila'],
+  favoriteSongs: ['Youtiful', 'Love Story'],
   volleyball:
     'Аймерек апай білімге деген құштарлығымен ғана емес, спортқа деген қызығушылығымен де ерекшеленеді. Волейбол — оның белсенді өмірінің бір бөлігі.',
-  musicPreferencesConfirmed: false,
+  musicPreferencesConfirmed: true,
 }
 
 export const storySteps = [

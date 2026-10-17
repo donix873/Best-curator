@@ -1,8 +1,9 @@
-import { Headphones, Music, Star } from 'lucide-react'
+import { Music, Star } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { Reveal } from '../components/Reveal'
 import { Volleyball } from '../components/Volleyball'
 import { aimerek } from '../data/aimerek'
+import { assetUrl } from '../utils/assets'
 
 export function HerWorldPage() {
   return (
@@ -14,17 +15,23 @@ export function HerWorldPage() {
       </header>
 
       <section className="music-world">
-        <Reveal className="music-world__record" direction="left">
-          <div className="vinyl" aria-hidden="true"><span><Music /></span></div>
-          <div className="music-world__stars"><Star /><Star /><Star /></div>
+        <Reveal className="music-world__photo" direction="left">
+          <img
+            src={assetUrl('images/optimized/music/stray-kids-group.webp') ?? undefined}
+            alt="Stray Kids тобының топтық фотосуреті"
+          />
+          <div className="music-world__photo-shade" aria-hidden="true" />
+          <div className="music-world__photo-copy">
+            <span>STRAY KIDS</span>
+            <strong>YOUTIFUL</strong>
+            <small>YOU ARE A MIRACLE</small>
+          </div>
+          <span className="music-world__photo-note" aria-hidden="true"><Music /></span>
         </Reveal>
         <Reveal className="music-world__copy" direction="right">
           <p className="eyebrow">K-POP · STRAY KIDS · YOUTIFUL</p>
           <h2>Сезімге толы <em>әуен</em></h2>
           <p>«Музыка — кейде сөзбен жеткізе алмайтын сезімді жеткізетін ерекше әлем.»</p>
-          {!aimerek.musicPreferencesConfirmed && (
-            <div className="fact-notice"><Headphones size={18} /><span>Музыкалық талғам туралы дерек әлі нақтылануда.</span></div>
-          )}
           <div className="music-tags" aria-label="Тақырыптар">
             <span>Youtiful</span><span>Stray Kids</span><span>K-pop</span>
           </div>

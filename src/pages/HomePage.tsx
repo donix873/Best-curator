@@ -144,7 +144,7 @@ export function HomePage() {
         <div className="section-heading">
           <Reveal><p className="eyebrow">АЙМЕРЕК АПАЙДЫҢ ЖОЛЫ · HER STORY</p></Reveal>
           <Reveal delay={0.1}><h2>Арманнан басталған <em>жол</em></h2></Reveal>
-          <Reveal delay={0.2}><p>Әр кезеңнің өз үні, өз жарығы бар. Нақты оқиғалар мен күндер материалдардан кейін осы хикаяны толықтырады.</p></Reveal>
+          <Reveal delay={0.2}><p>Әр кезеңнің өз үні, өз жарығы бар. Бұл хикая суреттермен және расталған нәтижелермен өріледі.</p></Reveal>
         </div>
         <div className="timeline">
           {storySteps.map((step, index) => (
@@ -182,8 +182,8 @@ export function HomePage() {
         </Reveal>
         <Reveal direction="right" className="preview-panel__card">
           <span className="preview-panel__spark"><Sparkles /></span>
-          <strong>—</strong>
-          <span>РАСТАЛҒАН НӘТИЖЕГЕ АРНАЛҒАН ОРЫН</span>
+          <strong>{aimerek.untScore}</strong>
+          <span>ҰБТ · 98 / 140 · 25.06.2026</span>
         </Reveal>
       </section>
 
@@ -198,8 +198,8 @@ export function HomePage() {
 
       <section className="section gratitude" id="gratitude">
         <div className="gratitude__glow" aria-hidden="true" />
-        <Reveal><p className="eyebrow">БІЗДІҢ АЛҒЫСЫМЫЗ</p></Reveal>
-        <Reveal delay={0.1}><h2 className="gratitude__title">Жүректен шыққан <em>сөздер</em></h2></Reveal>
+        <Reveal><p className="eyebrow">АЛҒЫС ХАТТАР</p></Reveal>
+        <Reveal delay={0.1}><h2 className="gratitude__title">Жүректен шыққан <em>елу хат</em></h2></Reveal>
         <Reveal delay={0.2}><p className="gratitude__intro">Елу хат. Елу жылы ой. Әрқайсысы — сізге айтқымыз келген алғысымыздың бір бөлігі.</p></Reveal>
         <div className="gratitude__notes">
           <motion.svg

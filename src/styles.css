@@ -212,6 +212,23 @@ main { position: relative; z-index: 1; }
 .achievement-proof__result img { width: 100%; height: 100%; object-fit: contain; }
 .achievement-proof p { max-width: 380px; margin: 24px 0 0; color: var(--muted); line-height: 1.65; }
 .achievement-proof p strong { color: var(--cream); font-weight: 500; }
+.unt-breakdown { margin-top: 90px; }
+.unt-breakdown__heading { max-width: 720px; margin-bottom: 42px; }
+.unt-breakdown__heading h2 { margin: 0 0 18px; font-family: Georgia, serif; font-size: clamp(42px, 6vw, 72px); font-weight: 400; line-height: 1; }
+.unt-breakdown__heading p:last-child { color: var(--muted); }
+.unt-breakdown__grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; }
+.unt-subject { min-width: 0; padding: 24px 20px; border: 1px solid var(--line); border-radius: 3px 20px 3px 20px; background: linear-gradient(145deg, rgba(45,26,55,.7), rgba(20,15,27,.8)); }
+.unt-subject__top { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+.unt-subject__top > span { overflow: hidden; color: var(--blush); font-size: 9px; font-weight: 700; letter-spacing: .08em; text-overflow: ellipsis; white-space: nowrap; }
+.unt-subject__top strong { color: var(--cream); font-family: Georgia, serif; font-size: 30px; font-weight: 400; }
+.unt-subject__top small { color: var(--muted); font-family: inherit; font-size: 13px; }
+.unt-subject p { min-height: 38px; margin: 12px 0 20px; color: var(--muted); font-size: 12px; line-height: 1.45; }
+.unt-subject__track { height: 4px; overflow: hidden; border-radius: 999px; background: rgba(247,237,232,.08); }
+.unt-subject__track span { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, var(--lavender), var(--blush)); box-shadow: 0 0 14px rgba(244,184,210,.45); }
+.unt-breakdown__total { display: flex; justify-content: space-between; align-items: center; gap: 24px; margin-top: 14px; padding: 24px 28px; border: 1px solid rgba(244,184,210,.25); background: rgba(244,184,210,.06); }
+.unt-breakdown__total > span { color: var(--blush); font-size: 9px; font-weight: 700; letter-spacing: .18em; }
+.unt-breakdown__total strong { color: var(--cream); font-family: Georgia, serif; font-size: clamp(20px, 3vw, 34px); font-weight: 400; }
+.unt-breakdown__total em { color: var(--blush); font-size: 1.3em; }
 .verified-achievements { margin-top: 110px; }
 .verified-achievements__heading { max-width: 700px; margin-bottom: 48px; }
 .verified-achievements__heading h2 { margin: 0; font-family: Georgia, serif; font-size: clamp(42px, 6vw, 72px); font-weight: 400; line-height: 1; }
@@ -236,6 +253,15 @@ main { position: relative; z-index: 1; }
 .page-hero--world h1 em { display: inline; }
 .music-world, .volleyball-section { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 8vw; min-height: 600px; padding: 60px 0 100px; }
 .music-world__record { position: relative; display: grid; place-items: center; min-height: 480px; }
+.music-world__photo { position: relative; justify-self: center; width: min(100%, 640px); aspect-ratio: 1200 / 732; overflow: hidden; border: 1px solid rgba(244,184,210,.25); border-radius: 26px 150px 26px 26px; background: #15111b; box-shadow: 0 30px 70px rgba(0,0,0,.38), 0 0 70px rgba(201,165,232,.1); rotate: -1.5deg; }
+.music-world__photo::before { content: ""; position: absolute; z-index: 3; inset: 10px; border: 1px solid rgba(247,237,232,.28); border-radius: inherit; pointer-events: none; }
+.music-world__photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% center; }
+.music-world__photo-shade { position: absolute; inset: 0; background: linear-gradient(180deg, transparent 38%, rgba(11,8,16,.32) 62%, rgba(11,8,16,.94)); }
+.music-world__photo-copy { position: absolute; z-index: 2; left: 36px; right: 36px; bottom: 32px; display: flex; flex-direction: column; }
+.music-world__photo-copy span { color: var(--blush); font-size: 9px; font-weight: 700; letter-spacing: .32em; }
+.music-world__photo-copy strong { margin: 4px 0; color: var(--cream); font-family: Georgia, serif; font-size: clamp(38px, 5vw, 66px); font-weight: 400; line-height: 1; }
+.music-world__photo-copy small { color: rgba(247,237,232,.55); font-size: 9px; letter-spacing: .18em; }
+.music-world__photo-note { position: absolute; z-index: 4; top: 28px; right: 28px; display: grid; place-items: center; width: 48px; height: 48px; border: 1px solid rgba(247,237,232,.32); border-radius: 50%; color: var(--cream); background: rgba(16,13,25,.55); backdrop-filter: blur(12px); }
 .vinyl { display: grid; place-items: center; width: min(390px, 85vw); aspect-ratio: 1; border-radius: 50%; background: repeating-radial-gradient(circle, #1b1520 0 4px, #25192a 5px 7px, #171219 8px 11px); box-shadow: 0 35px 65px rgba(0,0,0,.45), 0 0 70px rgba(201,165,232,.15); animation: spin-slow 18s linear infinite; }
 .vinyl::before { content: ""; position: absolute; width: 43%; aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle, var(--night) 0 8%, #bf8eba 9% 14%, #6e486f 15% 100%); }
 .vinyl span { position: relative; z-index: 1; display: grid; place-items: center; width: 42px; height: 42px; border-radius: 50%; color: var(--blush); background: var(--night); }
@@ -287,6 +313,7 @@ main { position: relative; z-index: 1; }
   .volleyball-section__art { grid-row: 1; }
   .gratitude__notes { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .verified-achievements__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .unt-breakdown__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 
 @media (max-width: 680px) {
@@ -332,6 +359,11 @@ main { position: relative; z-index: 1; }
   .achievement-card { min-height: 220px; }
   .music-world { gap: 20px; }
   .music-world__record { min-height: 380px; }
+  .music-world__photo { width: 100%; border-radius: 20px 90px 20px 20px; }
+  .music-world__photo-copy { left: 24px; right: 24px; bottom: 24px; }
+  .unt-breakdown__grid { grid-template-columns: 1fr; }
+  .unt-subject p { min-height: 0; }
+  .unt-breakdown__total { align-items: flex-start; flex-direction: column; }
   .volleyball-art { min-height: 370px; }
   .volleyball-art__ball { width: 185px; }
   .lightbox { grid-template-columns: 48px minmax(0, 1fr) 48px; padding-inline: 4px; }

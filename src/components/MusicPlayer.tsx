@@ -12,7 +12,7 @@ export function MusicPlayer() {
       <Music2 size={16} className="music-player__note" aria-hidden="true" />
       <div className="music-player__info">
         <strong>{trackInfo.title}</strong>
-        <span>{unavailable ? 'Аудиофайл кейін қосылады' : trackInfo.artist}</span>
+        <span>{unavailable ? 'Әнді қайта қосып көріңіз' : trackInfo.artist}</span>
       </div>
       <button className="music-player__mute" onClick={() => setMuted(!muted)} aria-label={muted ? 'Дыбысты қосу' : 'Дыбысты өшіру'}>
         {muted ? <VolumeX size={16} /> : <Volume2 size={16} />}

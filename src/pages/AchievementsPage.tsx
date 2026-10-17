@@ -4,10 +4,18 @@ import { aimerek } from '../data/aimerek'
 import { assetUrl } from '../utils/assets'
 
 const sections = [
-  { title: 'ҰБТ нәтижесі', icon: GraduationCap },
-  { title: 'Infologia-дағы жетістіктері', icon: BookOpen },
-  { title: 'Сертификаттары', icon: FileBadge },
-  { title: 'Басқа жетістіктері', icon: Award },
+  { title: 'ҰБТ нәтижесі', icon: GraduationCap, text: '25.06.2026 · 98 / 140 балл' },
+  { title: 'Infologia-дағы жетістіктері', icon: BookOpen, text: 'preSENIOR және SENIOR топтарына қабылданды.' },
+  { title: 'Сертификаттары', icon: FileBadge, text: 'Оқу жолындағы сертификаттары мен марапаттары.' },
+  { title: 'Кураторлық жолы', icon: Award, text: 'INFO-32 тобының кураторы.' },
+]
+
+const untSubjects = [
+  { label: 'Қазақстан тарихы', short: 'Тарих', score: 17, max: 20 },
+  { label: 'Оқу сауаттылығы', short: 'Оқу сауат.', score: 10, max: 10 },
+  { label: 'Математикалық сауаттылық', short: 'Мат. сауат.', score: 6, max: 10 },
+  { label: 'Математика', short: 'Математика', score: 25, max: 50 },
+  { label: 'Информатика', short: 'Информатика', score: 40, max: 50 },
 ]
 
 export function AchievementsPage() {
@@ -38,6 +46,32 @@ export function AchievementsPage() {
             />
           </button>
           <p><strong>25.06.2026</strong> · Нәтиже жеке қорытынды парақпен және ресми тізімдегі жазбамен расталды.</p>
+        </Reveal>
+      </section>
+
+      <section className="unt-breakdown" aria-labelledby="unt-breakdown-title">
+        <Reveal className="unt-breakdown__heading">
+          <p className="eyebrow">ҰБТ · ПӘНДЕР БОЙЫНША</p>
+          <h2 id="unt-breakdown-title">98 баллдың <em>құрамы</em></h2>
+          <p>Жеке нәтиже парағында көрсетілген пәндік балдар.</p>
+        </Reveal>
+        <div className="unt-breakdown__grid">
+          {untSubjects.map((subject, index) => (
+            <Reveal className="unt-subject" delay={index * 0.06} key={subject.label}>
+              <div className="unt-subject__top">
+                <span>{subject.short}</span>
+                <strong>{subject.score}<small> / {subject.max}</small></strong>
+              </div>
+              <p>{subject.label}</p>
+              <div className="unt-subject__track" aria-hidden="true">
+                <span style={{ width: `${(subject.score / subject.max) * 100}%` }} />
+              </div>
+            </Reveal>
+          ))}
+        </div>
+        <Reveal className="unt-breakdown__total">
+          <span>ЖАЛПЫ НӘТИЖЕ</span>
+          <strong>17 + 10 + 6 + 25 + 40 = <em>98</em></strong>
         </Reveal>
       </section>
 
@@ -72,12 +106,12 @@ export function AchievementsPage() {
       )}
 
       <section className="achievement-grid">
-        {sections.map(({ title, icon: Icon }, index) => (
+        {sections.map(({ title, icon: Icon, text }, index) => (
           <Reveal className="achievement-card" delay={index * 0.08} key={title}>
             <Icon size={24} aria-hidden="true" />
             <span>0{index + 1}</span>
             <h2>{title}</h2>
-            <p>Бұл бөлім расталған материалдармен толтырылады.</p>
+            <p>{text}</p>
           </Reveal>
         ))}
       </section>
