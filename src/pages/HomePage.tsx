@@ -133,6 +133,18 @@ export function HomePage() {
                       <figcaption>Infologia · preSENIOR</figcaption>
                     </figure>
                   </>
+                ) : index === 2 ? (
+                  <>
+                    <p>2026 жылғы 25 маусымдағы ҰБТ нәтижесі — 98 балл. Бұл нәтиже екі ұсынылған материалмен расталды.</p>
+                    <figure className="timeline__photo">
+                      <img
+                        src={assetUrl('images/optimized/infologia/unt-result-98-09.webp')}
+                        alt="Аймерек апайдың 98 балл алғанын көрсететін ҰБТ нәтижесі"
+                        loading="lazy"
+                      />
+                      <figcaption>ҰБТ · 98 балл</figcaption>
+                    </figure>
+                  </>
                 ) : (
                   <p>Бұл кезең туралы расталған мәтін мен фотосурет кейін қосылады.</p>
                 )}

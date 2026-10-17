@@ -26,8 +26,18 @@ export function AchievementsPage() {
           <small>{aimerek.untYear ? `${aimerek.untYear} жыл` : 'Расталған нәтиже әлі қосылмады'}</small>
         </Reveal>
         <Reveal className="achievement-proof" direction="right">
-          <div className="achievement-proof__seal"><GraduationCap /></div>
-          <p>Нәтиже скриншоты келгенде, балл мен жыл осы жерде түпнұсқа дәлелімен бірге көрсетіледі.</p>
+          <button
+            className="achievement-proof__result"
+            type="button"
+            onClick={() => window.open(assetUrl('images/optimized/infologia/unt-result-98-09.webp') ?? undefined, '_blank', 'noopener,noreferrer')}
+            aria-label="ҰБТ нәтижесінің дәлелін толық ашу"
+          >
+            <img
+              src={assetUrl('images/optimized/infologia/unt-result-98-09.webp') ?? undefined}
+              alt="Қасыбек Аймеректің 98 балл алғанын көрсететін ҰБТ нәтижесі"
+            />
+          </button>
+          <p><strong>25.06.2026</strong> · Нәтиже жеке қорытынды парақпен және ресми тізімдегі жазбамен расталды.</p>
         </Reveal>
       </section>
 
