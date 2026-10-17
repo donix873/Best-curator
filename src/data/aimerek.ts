@@ -44,7 +44,8 @@ export const aimerek: AimerekData = {
   untYear: 2026,
   infologiaStory:
     'Ұсынылған материалдар Аймерек апайдың Infologia-дағы оқу жолында preSENIOR және SENIOR топтарына қабылданғанын растайды.',
-  curatorStory: null,
+  curatorStory:
+    'Ұсынылған материалда Қасыбек Аймерек INFO-32 тобының кураторы ретінде көрсетілген.',
   achievements: [
     {
       title: 'ҰБТ нәтижесі — 98 балл',
@@ -53,6 +54,11 @@ export const aimerek: AimerekData = {
       description:
         '2026 жылғы 25 маусымдағы ҰБТ нәтижесі — 98 балл. Нәтиже жеке қорытынды парақпен және ресми тізімдегі жазбамен расталды.',
       image: 'images/optimized/infologia/unt-result-98-09.webp',
+    },
+    {
+      title: 'INFO-32 тобының кураторы',
+      description: 'Команда таныстырылымында Қасыбек Аймерек INFO-32 тобының кураторы ретінде көрсетілген.',
+      image: 'images/optimized/curator-info32-proof-27-curated.webp',
     },
     {
       title: 'preSENIOR тобына қабылдануы',
@@ -79,6 +85,33 @@ export const aimerek: AimerekData = {
       category: 'Естеліктер',
       width: 470,
       height: 588,
+    },
+    {
+      src: 'images/optimized/personal-studio-seated-25-curated.webp',
+      fullSrc: 'images/optimized/personal-studio-seated-25.webp',
+      alt: 'Аймерек апайдың орындықта отырған студиялық портреті',
+      caption: 'Сабырлы сәт',
+      category: 'Естеліктер',
+      width: 470,
+      height: 588,
+    },
+    {
+      src: 'images/optimized/curator-info32-proof-27-curated.webp',
+      fullSrc: 'images/optimized/curator-info32-proof-27.webp',
+      alt: 'Қасыбек Аймеректің INFO-32 кураторы екенін көрсететін команда таныстырылымы',
+      caption: 'INFO-32 · кураторлық жолы',
+      category: 'Кураторлық',
+      width: 591,
+      height: 739,
+    },
+    {
+      src: 'images/optimized/education-astana-it-university-26-curated.webp',
+      fullSrc: 'images/optimized/education-astana-it-university-26.webp',
+      alt: 'Astana IT University ғимаратының сыртқы көрінісі',
+      caption: 'Astana IT University атмосферасы',
+      category: 'Оқу',
+      width: 591,
+      height: 739,
     },
     {
       src: 'images/optimized/personal-prom-blue-21-curated.webp',

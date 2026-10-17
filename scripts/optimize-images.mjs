@@ -21,6 +21,9 @@ const curatedCrops = {
   'personal-prom-blue-22.jpg': { left: 40, top: 400, width: 470, height: 588 },
   'personal-prom-blue-23.jpg': { left: 40, top: 400, width: 470, height: 588 },
   'personal-studio-portrait-24.jpg': { left: 40, top: 330, width: 470, height: 588 },
+  'personal-studio-seated-25.jpg': { left: 40, top: 330, width: 470, height: 588 },
+  'education-astana-it-university-26.jpg': { left: 0, top: 235, width: 591, height: 739 },
+  'curator-info32-proof-27.jpg': { left: 0, top: 280, width: 591, height: 739 },
 }
 
 async function listImages(directory) {

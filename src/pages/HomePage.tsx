@@ -90,9 +90,9 @@ const storyMoments = [
     caption: 'Жетістікке толы күн',
   },
   {
-    text: 'Аймерек апайдың жолы — жақын адамдармен бөліскен жарқын естеліктердің де тарихы.',
-    image: 'images/optimized/personal-friendship-night-12-curated.webp',
-    caption: 'Жарқын кештен естелік',
+    text: aimerek.curatorStory,
+    image: 'images/optimized/curator-info32-proof-27-curated.webp',
+    caption: 'INFO-32 · кураторлық жолы',
   },
 ]
 
