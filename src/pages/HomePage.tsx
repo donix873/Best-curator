@@ -71,12 +71,12 @@ const storyMoments = [
   },
   {
     text: aimerek.infologiaStory,
-    image: 'images/optimized/infologia/infologia-presenior-03.webp',
+    image: 'images/optimized/infologia/infologia-presenior-03-curated.webp',
     caption: 'Infologia · preSENIOR',
   },
   {
     text: '2026 жылғы 25 маусымдағы ҰБТ нәтижесі — 98 балл. Бұл нәтиже екі ұсынылған материалмен расталды.',
-    image: 'images/optimized/infologia/unt-result-98-09.webp',
+    image: 'images/optimized/infologia/unt-result-98-09-curated.webp',
     caption: 'ҰБТ · 98 балл',
   },
   {

@@ -7,6 +7,16 @@ const sourceRoot = join(projectRoot, 'source-materials')
 const outputRoot = join(projectRoot, 'public', 'images', 'optimized')
 const supported = new Set(['.jpg', '.jpeg', '.png', '.webp', '.heic', '.heif', '.tif', '.tiff'])
 const curatedCrops = {
+  'infologia/infologia-certificate-story-01.jpg': { left: 0, top: 195, width: 591, height: 650 },
+  'infologia/infologia-study-desk-02.jpg': { left: 0, top: 118, width: 591, height: 870 },
+  'infologia/infologia-presenior-03.jpg': { left: 0, top: 118, width: 591, height: 980 },
+  'infologia/infologia-group-list-04.jpg': { left: 0, top: 118, width: 591, height: 930 },
+  'infologia/infologia-senior-collage-05.jpg': { left: 0, top: 118, width: 591, height: 980 },
+  'infologia/infologia-fortis-memory-06.jpg': { left: 0, top: 118, width: 591, height: 980 },
+  'infologia/infologia-graduation-evening-07.jpg': { left: 0, top: 118, width: 591, height: 980 },
+  'infologia/infologia-nexus-group-08.jpg': { left: 0, top: 118, width: 591, height: 980 },
+  'infologia/unt-result-98-09.jpg': { left: 0, top: 118, width: 591, height: 980 },
+  'infologia/unt-result-list-98-10.jpg': { left: 0, top: 118, width: 591, height: 930 },
   'personal-graduation-portrait-11.jpg': { left: 0, top: 270, width: 591, height: 739 },
   'personal-friendship-night-12.jpg': { left: 0, top: 285, width: 591, height: 739 },
   'personal-photobooth-friend-13.jpg': { left: 0, top: 117, width: 591, height: 739 },

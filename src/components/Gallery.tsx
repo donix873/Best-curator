@@ -40,7 +40,7 @@ export function Gallery({ items }: { items: GalleryItem[] }) {
         <div className="gallery-grid">
           {filtered.map((item, index) => (
             <motion.button
-              className="polaroid"
+              className={`polaroid${item.fit === 'contain' ? ' polaroid--contain' : ''}`}
               key={`${item.src}-${index}`}
               onClick={() => setActiveIndex(index)}
               whileHover={{ y: -8, rotate: index % 2 ? 1 : -1 }}

@@ -29,11 +29,11 @@ export function AchievementsPage() {
           <button
             className="achievement-proof__result"
             type="button"
-            onClick={() => window.open(assetUrl('images/optimized/infologia/unt-result-98-09.webp') ?? undefined, '_blank', 'noopener,noreferrer')}
+            onClick={() => window.open(assetUrl('images/optimized/infologia/unt-result-98-09-curated.webp') ?? undefined, '_blank', 'noopener,noreferrer')}
             aria-label="ҰБТ нәтижесінің дәлелін толық ашу"
           >
             <img
-              src={assetUrl('images/optimized/infologia/unt-result-98-09.webp') ?? undefined}
+              src={assetUrl('images/optimized/infologia/unt-result-98-09-curated.webp') ?? undefined}
               alt="Қасыбек Аймеректің 98 балл алғанын көрсететін ҰБТ нәтижесі"
             />
           </button>
