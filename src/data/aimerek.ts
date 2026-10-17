@@ -46,7 +46,7 @@ export const aimerek: AimerekData = {
   infologiaStory:
     'Ұсынылған материалдар Аймерек апайдың Infologia-дағы оқу жолында preSENIOR және SENIOR топтарына қабылданғанын растайды.',
   curatorStory:
-    'Ұсынылған материалда Қасыбек Аймерек INFO-32 тобының кураторы ретінде көрсетілген.',
+    'Ұсынылған материалдар Қасыбек Аймеректің INFO-32 NEXUS тобымен онлайн кездесулер өткізіп, кураторлық жұмыс жүргізгенін растайды.',
   achievements: [
     {
       title: 'ҰБТ нәтижесі — 98 балл',
@@ -54,12 +54,12 @@ export const aimerek: AimerekData = {
       year: 2026,
       description:
         '2026 жылғы 25 маусымдағы ҰБТ нәтижесі — 98 балл. Нәтиже жеке қорытынды парақпен және ресми тізімдегі жазбамен расталды.',
-      image: 'images/optimized/infologia/unt-result-98-09-curated.webp',
+      image: 'images/optimized/unt-result-clean-98-31.webp',
     },
     {
       title: 'INFO-32 тобының кураторы',
-      description: 'Команда таныстырылымында Қасыбек Аймерек INFO-32 тобының кураторы ретінде көрсетілген.',
-      image: 'images/optimized/curator-info32-proof-27-curated.webp',
+      description: 'Онлайн кездесулер мен NEXUS тобының материалдары Қасыбек Аймеректің INFO-32 тобына кураторлық еткенін растайды.',
+      image: 'images/optimized/curator-meet-presenting-30.webp',
     },
     {
       title: 'preSENIOR тобына қабылдануы',
@@ -95,12 +95,21 @@ export const aimerek: AimerekData = {
       height: 588,
     },
     {
-      src: 'images/optimized/curator-info32-proof-27-curated.webp',
-      alt: 'Қасыбек Аймеректің INFO-32 кураторы екенін көрсететін команда таныстырылымы',
-      caption: 'INFO-32 · кураторлық жолы',
+      src: 'images/optimized/curator-meet-presenting-30.webp',
+      alt: 'Қасыбек Аймерек жүргізіп отырған INFO-32 NEXUS тобының онлайн кездесуі',
+      caption: 'INFO-32 · онлайн кураторлық кездесу',
       category: 'Кураторлық',
-      width: 591,
-      height: 739,
+      width: 1280,
+      height: 960,
+      fit: 'contain',
+    },
+    {
+      src: 'images/optimized/curator-meet-session-28.webp',
+      alt: 'Аймерек апай мен INFO-32 NEXUS оқушылары қатысқан Google Meet кездесуі',
+      caption: 'INFO-32 · бірге өткен онлайн сабақ',
+      category: 'Кураторлық',
+      width: 1280,
+      height: 720,
       fit: 'contain',
     },
     {
@@ -239,21 +248,21 @@ export const aimerek: AimerekData = {
       fit: 'contain',
     },
     {
-      src: 'images/optimized/infologia/infologia-nexus-group-08-curated.webp',
+      src: 'images/optimized/curator-nexus-collage-29.webp',
       alt: 'Infologia INFO-32 NEXUS тобының ортақ коллажы',
-      caption: 'INFO-32 NEXUS · 31.08.2026',
+      caption: 'INFO-32 NEXUS · бір команда',
       category: 'Кураторлық',
-      width: 591,
-      height: 980,
+      width: 1280,
+      height: 997,
       fit: 'contain',
     },
     {
-      src: 'images/optimized/infologia/unt-result-98-09-curated.webp',
+      src: 'images/optimized/unt-result-clean-98-31.webp',
       alt: 'Қасыбек Аймеректің 2026 жылғы ҰБТ-дан 98 балл алғанын көрсететін нәтиже парағы',
       caption: 'ҰБТ нәтижесі · 98 балл',
       category: 'Оқу',
-      width: 591,
-      height: 980,
+      width: 960,
+      height: 1280,
       fit: 'contain',
     },
     {

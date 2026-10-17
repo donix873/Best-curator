@@ -76,7 +76,7 @@ const storyMoments = [
   },
   {
     text: '2026 жылғы 25 маусымдағы ҰБТ нәтижесі — 98 балл. Бұл нәтиже екі ұсынылған материалмен расталды.',
-    image: 'images/optimized/infologia/unt-result-98-09-curated.webp',
+    image: 'images/optimized/unt-result-clean-98-31.webp',
     caption: 'ҰБТ · 98 балл',
   },
   {
@@ -91,8 +91,8 @@ const storyMoments = [
   },
   {
     text: aimerek.curatorStory,
-    image: 'images/optimized/curator-info32-proof-27-curated.webp',
-    caption: 'INFO-32 · кураторлық жолы',
+    image: 'images/optimized/curator-meet-presenting-30.webp',
+    caption: 'INFO-32 · онлайн кураторлық кездесу',
   },
 ]
 
