@@ -6,6 +6,13 @@ const projectRoot = new URL('..', import.meta.url).pathname
 const sourceRoot = join(projectRoot, 'source-materials')
 const outputRoot = join(projectRoot, 'public', 'images', 'optimized')
 const supported = new Set(['.jpg', '.jpeg', '.png', '.webp', '.heic', '.heif', '.tif', '.tiff'])
+const curatedCrops = {
+  'personal-graduation-portrait-11.jpg': { left: 0, top: 270, width: 591, height: 739 },
+  'personal-friendship-night-12.jpg': { left: 0, top: 285, width: 591, height: 739 },
+  'personal-photobooth-friend-13.jpg': { left: 0, top: 117, width: 591, height: 739 },
+  'personal-outdoor-portrait-14.jpg': { left: 0, top: 270, width: 591, height: 739 },
+  'personal-graduation-selfies-15.jpg': { left: 0, top: 117, width: 591, height: 739 },
+}
 
 async function listImages(directory) {
   const entries = await readdir(directory, { withFileTypes: true })
@@ -31,6 +38,7 @@ for (const source of images) {
   const safeName = join(parsed.dir, parsed.name.toLowerCase().replace(/[^a-z0-9а-яёәіңғүұқөһ-]+/giu, '-'))
   const fullPath = join(outputRoot, `${safeName}.webp`)
   const thumbPath = join(outputRoot, `${safeName}-thumb.webp`)
+  const curatedPath = join(outputRoot, `${safeName}-curated.webp`)
   await mkdir(parse(fullPath).dir, { recursive: true })
 
   await sharp(source)
@@ -44,6 +52,15 @@ for (const source of images) {
     .resize({ width: 900, height: 1125, fit: 'cover', position: 'attention', withoutEnlargement: true })
     .webp({ quality: 80, smartSubsample: true })
     .toFile(thumbPath)
+
+  const curatedCrop = curatedCrops[relativePath]
+  if (curatedCrop) {
+    await sharp(source)
+      .rotate()
+      .extract(curatedCrop)
+      .webp({ quality: 86, smartSubsample: true })
+      .toFile(curatedPath)
+  }
 
   console.log(`Optimized ${relativePath}`)
 }

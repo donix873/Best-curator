@@ -63,6 +63,39 @@ const gratitude = [
   { theme: 'АЛҒЫС', text: 'Рақмет сізге, Аймерек апай! Біз үшін жасаған барлық еңбегіңіз жүрегімізде қалады.' },
 ]
 
+const storyMoments = [
+  {
+    text: 'Түлектер кешінен қалған бұл салтанатты кадр Аймерек апайдың өміріндегі жарқын кезеңдердің бірін сақтайды.',
+    image: 'images/optimized/personal-graduation-portrait-11-curated.webp',
+    caption: 'Түлектер кеші · 24.08.2026',
+  },
+  {
+    text: aimerek.infologiaStory,
+    image: 'images/optimized/infologia/infologia-presenior-03.webp',
+    caption: 'Infologia · preSENIOR',
+  },
+  {
+    text: '2026 жылғы 25 маусымдағы ҰБТ нәтижесі — 98 балл. Бұл нәтиже екі ұсынылған материалмен расталды.',
+    image: 'images/optimized/infologia/unt-result-98-09.webp',
+    caption: 'ҰБТ · 98 балл',
+  },
+  {
+    text: 'Ізденіске толы күндердің арасында есте қалатын тыныш әрі әдемі сәттер де бар.',
+    image: 'images/optimized/personal-outdoor-portrait-14-curated.webp',
+    caption: 'Жол үстіндегі бір сәт',
+  },
+  {
+    text: 'Жетістікке жеткен күннің қуанышы осы жылы кадрларда сақталған.',
+    image: 'images/optimized/personal-graduation-selfies-15-curated.webp',
+    caption: 'Жетістікке толы күн',
+  },
+  {
+    text: 'Аймерек апайдың жолы — жақын адамдармен бөліскен жарқын естеліктердің де тарихы.',
+    image: 'images/optimized/personal-friendship-night-12-curated.webp',
+    caption: 'Жарқын кештен естелік',
+  },
+]
+
 export function HomePage() {
   const [showIntro, setShowIntro] = useState(() => sessionStorage.getItem('aimerek-intro-seen') !== 'yes')
   const { scrollYProgress } = useScroll()
@@ -121,33 +154,15 @@ export function HomePage() {
               <article>
                 <span>ЕСТЕЛІК БӨЛІМІ</span>
                 <h3>{step}</h3>
-                {index === 1 ? (
-                  <>
-                    <p>{aimerek.infologiaStory}</p>
-                    <figure className="timeline__photo">
-                      <img
-                        src={assetUrl('images/optimized/infologia/infologia-presenior-03.webp')}
-                        alt="Аймерек апайдың Infologia preSENIOR кезеңі"
-                        loading="lazy"
-                      />
-                      <figcaption>Infologia · preSENIOR</figcaption>
-                    </figure>
-                  </>
-                ) : index === 2 ? (
-                  <>
-                    <p>2026 жылғы 25 маусымдағы ҰБТ нәтижесі — 98 балл. Бұл нәтиже екі ұсынылған материалмен расталды.</p>
-                    <figure className="timeline__photo">
-                      <img
-                        src={assetUrl('images/optimized/infologia/unt-result-98-09.webp')}
-                        alt="Аймерек апайдың 98 балл алғанын көрсететін ҰБТ нәтижесі"
-                        loading="lazy"
-                      />
-                      <figcaption>ҰБТ · 98 балл</figcaption>
-                    </figure>
-                  </>
-                ) : (
-                  <p>Бұл кезең туралы расталған мәтін мен фотосурет кейін қосылады.</p>
-                )}
+                <p>{storyMoments[index].text}</p>
+                <figure className="timeline__photo">
+                  <img
+                    src={assetUrl(storyMoments[index].image)}
+                    alt={`${step}: Аймерек апайдың өмірінен фотосурет`}
+                    loading="lazy"
+                  />
+                  <figcaption>{storyMoments[index].caption}</figcaption>
+                </figure>
               </article>
             </Reveal>
           ))}
