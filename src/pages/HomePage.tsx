@@ -65,9 +65,9 @@ const gratitude = [
 
 const storyMoments = [
   {
-    text: 'Түлектер кешінен қалған бұл салтанатты кадр Аймерек апайдың өміріндегі жарқын кезеңдердің бірін сақтайды.',
-    image: 'images/optimized/personal-graduation-portrait-11-curated.webp',
-    caption: 'Түлектер кеші · 24.08.2026',
+    text: '2026 жылғы салтанатты кештен қалған бұл кадр Аймерек апайдың өміріндегі жарқын кезеңдердің бірін сақтайды.',
+    image: 'images/optimized/personal-prom-blue-21-curated.webp',
+    caption: 'Prom · 2026',
   },
   {
     text: aimerek.infologiaStory,

@@ -16,6 +16,11 @@ const curatedCrops = {
   'personal-new-city-night-17.jpg': { left: 40, top: 350, width: 470, height: 588 },
   'personal-new-city-sphere-18.jpg': { left: 40, top: 350, width: 470, height: 588 },
   'personal-night-portrait-19.jpg': { left: 40, top: 340, width: 470, height: 588 },
+  'personal-prom-blue-20.jpg': { left: 40, top: 400, width: 470, height: 588 },
+  'personal-prom-blue-21.jpg': { left: 40, top: 400, width: 470, height: 588 },
+  'personal-prom-blue-22.jpg': { left: 40, top: 400, width: 470, height: 588 },
+  'personal-prom-blue-23.jpg': { left: 40, top: 400, width: 470, height: 588 },
+  'personal-studio-portrait-24.jpg': { left: 40, top: 330, width: 470, height: 588 },
 }
 
 async function listImages(directory) {
