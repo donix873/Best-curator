@@ -145,30 +145,27 @@ main { position: relative; z-index: 1; }
 .lightbox__close { position: absolute; top: 22px; right: 22px; }
 .lightbox__previous, .lightbox__next { justify-self: center; }
 
-.gratitude { min-height: 1750px; text-align: center; }
+.gratitude { text-align: center; }
 .gratitude__glow { position: absolute; inset: 15% 10%; border-radius: 50%; background: radial-gradient(circle, rgba(244,184,210,.14), transparent 65%); filter: blur(35px); }
 .gratitude__title { margin: 0; font-family: Georgia, serif; font-size: clamp(46px, 6vw, 80px); font-weight: 400; }
 .gratitude__intro { max-width: 540px; margin: 20px auto 70px; color: var(--muted); line-height: 1.7; }
-.gratitude__notes { position: relative; max-width: 920px; min-height: 1420px; margin: 20px auto 0; }
+.gratitude__notes { position: relative; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); grid-auto-flow: dense; align-items: start; gap: 58px 22px; max-width: 1160px; margin: 20px auto 0; padding: 45px 0 90px; }
 .gratitude__thread { position: absolute; z-index: 0; inset: 0; width: 100%; height: 100%; overflow: visible; filter: drop-shadow(0 0 7px rgba(244,184,210,.55)); }
-.note { position: absolute; z-index: 1; width: min(350px, 80vw); padding: 30px 34px; border: 1px solid rgba(247,237,232,.16); border-radius: 3px 24px 3px 24px; box-shadow: 0 15px 40px rgba(0,0,0,.24), 0 0 28px rgba(244,184,210,.035); background: linear-gradient(145deg, rgba(57,34,66,.9), rgba(30,20,38,.94)); backdrop-filter: blur(10px); }
-.note::after { content: ""; position: absolute; width: 9px; height: 9px; top: 50%; border: 2px solid var(--blush); border-radius: 50%; background: var(--night); box-shadow: 0 0 13px rgba(244,184,210,.7); }
-.note:nth-of-type(odd)::after { right: -24px; }
-.note:nth-of-type(even)::after { left: -24px; }
+.note { position: relative; z-index: 1; min-height: 175px; padding: 28px 25px 25px; border: 1px solid rgba(247,237,232,.16); border-radius: 3px 24px 3px 24px; box-shadow: 0 15px 40px rgba(0,0,0,.24), 0 0 28px rgba(244,184,210,.035); background: linear-gradient(145deg, rgba(57,34,66,.92), rgba(30,20,38,.96)); backdrop-filter: blur(10px); }
+.note::before { content: ""; position: absolute; inset: 7px; border: 1px solid rgba(247,237,232,.055); border-radius: 2px 18px 2px 18px; pointer-events: none; }
+.note::after { content: ""; position: absolute; width: 9px; height: 9px; top: -34px; left: 50%; border: 2px solid var(--blush); border-radius: 50%; background: var(--night); box-shadow: 0 0 13px rgba(244,184,210,.7); }
 .note__number { position: absolute; top: 13px; right: 17px; color: rgba(247,237,232,.2); font-family: Georgia, serif; font-size: 13px; letter-spacing: .12em; }
-.note p { margin: 0; font-family: Georgia, serif; font-size: 21px; font-style: italic; line-height: 1.5; }
-.note--1 { left: 0; top: 1%; transform: rotate(-3deg); }
-.note--2 { right: 0; top: 11%; transform: rotate(2deg); }
-.note--3 { left: 4%; top: 21%; transform: rotate(2deg); }
-.note--4 { right: 5%; top: 31%; transform: rotate(-3deg); }
-.note--5 { left: 0; top: 41%; transform: rotate(-2deg); }
-.note--6 { right: 1%; top: 51%; transform: rotate(3deg); }
-.note--7 { left: 5%; top: 61%; transform: rotate(2deg); }
-.note--8 { right: 4%; top: 71%; transform: rotate(-2deg); }
-.note--9 { left: 2%; top: 81%; transform: rotate(-3deg); }
-.note--10 { left: 50%; bottom: 0; transform: translateX(-50%); color: var(--cream); background: linear-gradient(145deg, rgba(113,62,105,.86), rgba(56,32,68,.97)); }
-.note--10::after { display: none; }
-.note--10 svg { color: var(--blush); margin-bottom: 8px; }
+.note__theme { display: block; width: fit-content; margin-bottom: 22px; padding: 5px 9px; border: 1px solid rgba(244,184,210,.2); border-radius: 999px; color: var(--blush); background: rgba(244,184,210,.06); font-size: 8px; font-weight: 700; letter-spacing: .18em; }
+.note p { margin: 0; font-family: Georgia, serif; font-size: 18px; font-style: italic; line-height: 1.5; }
+.note:nth-of-type(4n+1) { rotate: -1.5deg; translate: 0 14px; }
+.note:nth-of-type(4n+2) { rotate: 1.2deg; translate: 0 -5px; }
+.note:nth-of-type(4n+3) { rotate: -0.7deg; translate: 0 24px; }
+.note:nth-of-type(4n+4) { rotate: 1.8deg; }
+.note:nth-of-type(11n+4), .note:nth-of-type(13n+7) { grid-column: span 2; min-height: 205px; padding: 35px 38px; background: radial-gradient(circle at 15% 15%, rgba(244,184,210,.18), transparent 40%), linear-gradient(145deg, rgba(91,48,88,.96), rgba(38,22,48,.98)); box-shadow: 0 22px 55px rgba(0,0,0,.3), 0 0 38px rgba(244,184,210,.1); }
+.note:nth-of-type(11n+4) p, .note:nth-of-type(13n+7) p { font-size: 23px; }
+.note--50 { grid-column: span 2; justify-self: center; width: min(620px, 100%); min-height: 220px; padding: 42px; color: var(--cream); background: radial-gradient(circle at center, rgba(244,184,210,.19), transparent 65%), linear-gradient(145deg, rgba(113,62,105,.94), rgba(56,32,68,.99)); box-shadow: 0 25px 70px rgba(0,0,0,.34), 0 0 60px rgba(244,184,210,.12); }
+.note--50 p { font-size: 27px; }
+.note--50 svg { color: var(--blush); margin-bottom: 12px; }
 
 .finale { position: relative; min-height: 100svh; display: grid; grid-template-columns: .85fr 1.15fr; align-items: center; gap: 7vw; padding: 110px max(5vw, calc((100vw - 1160px)/2)); overflow: hidden; }
 .finale__sunset { position: absolute; z-index: -1; inset: 0; background: radial-gradient(circle at 42% 42%, rgba(255,221,205,.28), transparent 18%), radial-gradient(ellipse at 50% 70%, rgba(244,141,176,.28), transparent 40%), linear-gradient(180deg, rgba(83,54,115,.24), rgba(116,51,101,.36) 58%, rgba(16,13,25,.92)); }
@@ -271,6 +268,7 @@ main { position: relative; z-index: 1; }
   .music-world__copy, .volleyball-section__copy { text-align: center; }
   .fact-notice, .music-tags { margin-inline: auto; justify-content: center; }
   .volleyball-section__art { grid-row: 1; }
+  .gratitude__notes { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (max-width: 680px) {
@@ -292,11 +290,12 @@ main { position: relative; z-index: 1; }
   .gallery-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
   .gratitude { min-height: auto; }
   .gratitude__intro { margin-bottom: 45px; }
-  .gratitude__notes { display: flex; flex-direction: column; gap: 22px; min-height: 0; padding-left: 25px; }
+  .gratitude__notes { display: flex; flex-direction: column; gap: 28px; min-height: 0; padding: 25px 0 35px 25px; }
   .gratitude__thread { left: 5px; width: 2px; height: 100%; background: linear-gradient(var(--lavender), var(--blush), var(--lavender)); opacity: .55; }
   .gratitude__thread path { display: none; }
-  .note, .note--1, .note--2, .note--3, .note--4, .note--5, .note--6, .note--7, .note--8, .note--9, .note--10 { position: relative; inset: auto; width: 100%; transform: none; }
-  .note::after, .note:nth-of-type(odd)::after, .note:nth-of-type(even)::after { display: block; left: -27px; right: auto; }
+  .note, .note:nth-of-type(4n+1), .note:nth-of-type(4n+2), .note:nth-of-type(4n+3), .note:nth-of-type(4n+4), .note:nth-of-type(11n+4), .note:nth-of-type(13n+7), .note--50 { position: relative; inset: auto; grid-column: auto; width: 100%; min-height: auto; padding: 28px 25px; rotate: 0deg; translate: none; }
+  .note::after { display: block; top: 50%; left: -27px; right: auto; }
+  .note--50 p, .note:nth-of-type(11n+4) p, .note:nth-of-type(13n+7) p { font-size: 21px; }
   .finale { padding: 90px 16px; }
   .finale__portrait { width: min(82vw, 360px); }
   .music-player { left: 10px; bottom: 10px; min-height: 52px; max-width: calc(100vw - 20px); }
