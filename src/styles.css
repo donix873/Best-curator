@@ -107,6 +107,9 @@ main { position: relative; z-index: 1; }
 .timeline article span { color: var(--blush); font-size: 9px; letter-spacing: .18em; }
 .timeline article h3 { margin: 10px 0; font-family: Georgia, serif; font-size: 29px; font-weight: 400; }
 .timeline article p { margin: 0; color: rgba(247,237,232,.47); font-size: 13px; line-height: 1.65; }
+.timeline__photo { position: relative; margin: 22px 0 10px; padding: 8px 8px 30px; border-radius: 3px; background: #f2eae5; box-shadow: 0 18px 40px rgba(0,0,0,.28); rotate: 1.5deg; }
+.timeline__photo img { display: block; width: 100%; max-height: 430px; border-radius: 2px; object-fit: contain; background: #17131c; }
+.timeline__photo figcaption { position: absolute; left: 14px; bottom: 8px; color: #3c2a40; font-family: Georgia, serif; font-size: 13px; font-style: italic; }
 .story-quote { max-width: 800px; margin: 90px auto 0; padding: 45px; border: 1px solid var(--line); border-radius: 2px 40px 2px 40px; text-align: center; background: linear-gradient(135deg, rgba(201,165,232,.07), rgba(244,184,210,.035)); }
 .story-quote svg { color: var(--blush); opacity: .6; }
 .story-quote p { margin: 18px 0 0; font-family: Georgia, serif; font-size: clamp(22px, 3vw, 34px); font-style: italic; line-height: 1.45; }
@@ -206,6 +209,17 @@ main { position: relative; z-index: 1; }
 .achievement-score small { color: var(--muted); }
 .achievement-proof__seal { display: grid; place-items: center; width: 110px; height: 110px; border: 1px solid rgba(201,165,232,.4); border-radius: 50%; color: var(--lavender); box-shadow: 0 0 0 12px rgba(201,165,232,.035), 0 0 0 24px rgba(201,165,232,.02); }
 .achievement-proof p { max-width: 380px; margin: 45px 0 0; color: var(--muted); line-height: 1.65; }
+.verified-achievements { margin-top: 110px; }
+.verified-achievements__heading { max-width: 700px; margin-bottom: 48px; }
+.verified-achievements__heading h2 { margin: 0; font-family: Georgia, serif; font-size: clamp(42px, 6vw, 72px); font-weight: 400; line-height: 1; }
+.verified-achievements__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.verified-achievement { overflow: hidden; border: 1px solid var(--line); border-radius: 3px 28px 3px 28px; background: linear-gradient(145deg, rgba(45,26,55,.82), rgba(20,15,27,.92)); box-shadow: 0 20px 45px rgba(0,0,0,.2); }
+.verified-achievement__image { display: block; width: 100%; height: 440px; padding: 12px; border: 0; border-bottom: 1px solid var(--line); background: radial-gradient(circle, rgba(201,165,232,.13), transparent 65%), #15111b; cursor: zoom-in; }
+.verified-achievement__image img { width: 100%; height: 100%; object-fit: contain; }
+.verified-achievement__copy { padding: 27px 25px 30px; }
+.verified-achievement__copy > span { color: var(--blush); font-size: 8px; font-weight: 700; letter-spacing: .18em; }
+.verified-achievement__copy h3 { margin: 12px 0 10px; font-family: Georgia, serif; font-size: 27px; font-weight: 400; line-height: 1.1; }
+.verified-achievement__copy p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.65; }
 .achievement-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 70px; }
 .achievement-card { position: relative; min-height: 260px; padding: 38px; overflow: hidden; border: 1px solid var(--line); background: linear-gradient(135deg, rgba(36,20,47,.38), rgba(16,13,25,.15)); }
 .achievement-card svg { color: var(--blush); }
@@ -269,6 +283,7 @@ main { position: relative; z-index: 1; }
   .fact-notice, .music-tags { margin-inline: auto; justify-content: center; }
   .volleyball-section__art { grid-row: 1; }
   .gratitude__notes { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .verified-achievements__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (max-width: 680px) {
@@ -308,6 +323,9 @@ main { position: relative; z-index: 1; }
   .achievement-feature { grid-template-columns: 1fr; }
   .achievement-score { border-right: 0; border-bottom: 1px solid var(--line); }
   .achievement-grid { grid-template-columns: 1fr; }
+  .verified-achievements { margin-top: 80px; }
+  .verified-achievements__grid { grid-template-columns: 1fr; }
+  .verified-achievement__image { height: min(125vw, 610px); }
   .achievement-card { min-height: 220px; }
   .music-world { gap: 20px; }
   .music-world__record { min-height: 380px; }

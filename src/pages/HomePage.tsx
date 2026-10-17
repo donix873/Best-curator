@@ -121,7 +121,21 @@ export function HomePage() {
               <article>
                 <span>ЕСТЕЛІК БӨЛІМІ</span>
                 <h3>{step}</h3>
-                <p>Бұл кезең туралы расталған мәтін мен фотосурет кейін қосылады.</p>
+                {index === 1 ? (
+                  <>
+                    <p>{aimerek.infologiaStory}</p>
+                    <figure className="timeline__photo">
+                      <img
+                        src={assetUrl('images/optimized/infologia/infologia-presenior-03.webp')}
+                        alt="Аймерек апайдың Infologia preSENIOR кезеңі"
+                        loading="lazy"
+                      />
+                      <figcaption>Infologia · preSENIOR</figcaption>
+                    </figure>
+                  </>
+                ) : (
+                  <p>Бұл кезең туралы расталған мәтін мен фотосурет кейін қосылады.</p>
+                )}
               </article>
             </Reveal>
           ))}
